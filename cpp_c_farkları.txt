@@ -1,0 +1,9 @@
+Cpp de;
+
+implicit int yok. Yani c de olan;
+
+implicit int (gizli int)
+
+int func();
+func();
+ayný tanýmlamadýr. Yani int yazýlmadýðý zaman, fonksiyon int olarak algýlamaktadýr. 
