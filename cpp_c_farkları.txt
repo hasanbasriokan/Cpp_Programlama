@@ -103,3 +103,30 @@ artýk cpp de, null ve ya 0 kullanmak yerine nullptr kullanmak gerekecektir.
 array decay???
 const???
 pointer??? (invalid pointer, dangling pointer, valid pointer)
+
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+2. ders
+
+c de user define type;
+structures
+unions
+enumarations
+
+cpp de user define type;
+class
+structures
+unions
+enumarations
+
+c deki structures ile cpp deki ayný deðildir.
+----------------------------------------------------------------------------------------
+
+c de user define type lar en az bir üyeye (member) sahip olmalýdýr.
+
+cpp de ise user define typelar herhangi bir üyeye sahip olmak zorunda deðildir. Bu durum ayný zmanda çok sýk kullanýlýr.
+----------------------------------------------------------------------------------------
+
+
