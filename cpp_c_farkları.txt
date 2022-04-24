@@ -1,5 +1,5 @@
-Cpp de;
 
+Cpp de;
 implicit int yok. Yani c de olan;
 
 implicit int (gizli int)
@@ -7,3 +7,99 @@ implicit int (gizli int)
 int func();
 func();
 ayný tanýmlamadýr. Yani int yazýlmadýðý zaman, fonksiyon int olarak algýlamaktadýr. 
+
+cpp de scope leakage vardýr. Bu da deðiþkenlerin kapsamýnýn az tutulmasý demektir.
+Yani deðiþkeni ilk nerede kullancaksak orada tanýmlamamýz gerekir.
+----------------------------------------------------------------------------------------
+
+c de;
+loose type control 
+Yani derleme zamaný kontrolleri zayýftýr. 
+
+cpp de;
+strict type control
+Yani derleme zamaný kontrolleri katýdýr.
+Bu da cpp yi daha güvenilir yapar. Derlendikten sonra hata alma ihtimalimiz azalýr.
+----------------------------------------------------------------------------------------
+
+c de;
+'A' //character constant denmektedir. Ancak bunun türü int olmaktadýr.
+
+cpp de;  
+'A' //character literal denmektedir. Bunun türü char olmaktadýr.
+----------------------------------------------------------------------------------------
+
+c de; 
+"Hasan Basri" //string literali. C de bunun türü, "char dizi[12]" dir.
+
+cpp de;
+"Hasan Basri" //string literali. Cpp de bunun türü, "const char dizi[12]" dir.
+----------------------------------------------------------------------------------------
+
+her ne kadar c de const char dememiþ olsakta, string literallerinin deðiþtirilebilir olduðu manasýna gelmez. String literalleri deðiþtirilemezler. Deðiþtirme iþlemi tanýmsýz davranýþtýr.
+
+örneðin;
+char* p ="kaya";
+*p = 'm'; 
+yapýlamaz. Tanýmsýz davranýþtýr.
+ ----------------------------------------------------------------------------------------
+
+c de;
+const int x;
+c de const nesneler initilaize edilmek zorunda deðildir.
+
+cpp de;
+const int x = 10;
+cpp de const nesneler initilaize edilmek zorundadýr. 
+----------------------------------------------------------------------------------------
+
+static anahtar sözcüðü, iç baðlantý saðlar. Ýç baðlantý, sadece o dosyanýn içinde kullanýlabilirken, dýþ baðlantý olursa, diðer modüllerden de eriþilebilir.
+C ve Cpp de global tanýmlamalar dýþ baðlantýdýr. Global tanýmlamalar staticle belirtilirse iç baðlantý olur.
+----------------------------------------------------------------------------------------
+
+C de globalde tanýmlanan;
+const int x = 10; //external (dýþ) baðlantýyken
+
+Cpp de globalde tanýmlanan;
+const int x = 10; //iç (internal) baðlantý olur.
+----------------------------------------------------------------------------------------
+
+c de karþýlaþtýrma operatörleri
+10 > 5 //bunun sonucunun türü int ve deðeri 1 iken
+
+ccp de;
+10 > 5 //bunun türü bool ve deðeri true dur.
+----------------------------------------------------------------------------------------
+
+cpp de bool ve int arasýnda örtülü tür dönüþümü vardýr.;
+int x = 10;
+bool y = x; olursa, // b = true olacaktýr.
+
+Eðer;
+int x = 0;
+bool y = x; olursa, // b = false olacaktýr.
+----------------------------------------------------------------------------------------
+
+cpp de adreslerden(pointerlerden) de bool türüne örtülü tür dönüþümü vardýr.
+içi dolu pointerler true sonuç verirken, null pointer false sonucunu verecektir.
+----------------------------------------------------------------------------------------
+
+Bool türünden aritmatik türe de örtülü dönüþüm vardýr. 
+bool deðer olarak true 1 e dönüþürken, 
+false deðer 0 a dönüþecektir.
+----------------------------------------------------------------------------------------
+
+Ancak bool türünden tanýmlanan deðiþkenlerle toplama, çýkarma, ++, -- iþlemleri kullanýlamaz.
+----------------------------------------------------------------------------------------
+
+bool un sizeof deðeri 1 dir.
+Bitsel düzeyde de temsil edilemez.
+----------------------------------------------------------------------------------------
+
+nullptr nin türü nullptr_t dir.
+artýk cpp de, null ve ya 0 kullanmak yerine nullptr kullanmak gerekecektir.
+----------------------------------------------------------------------------------------
+
+array decay???
+const???
+pointer??? (invalid pointer, dangling pointer, valid pointer)
