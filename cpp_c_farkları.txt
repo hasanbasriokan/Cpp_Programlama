@@ -6,98 +6,98 @@ implicit int (gizli int)
 
 int func();
 func();
-aynı tanımlamadır. Yani int yazılmadığı zaman, fonksiyon int olarak algılamaktadır. 
+aynÄ± tanÄ±mlamadÄ±r. Yani int yazÄ±lmadÄ±ÄŸÄ± zaman, fonksiyon int olarak algÄ±lamaktadÄ±r. 
 
-cpp de scope leakage vardır. Bu da değişkenlerin kapsamının az tutulması demektir.
-Yani değişkeni ilk nerede kullancaksak orada tanımlamamız gerekir.
+cpp de scope leakage vardÄ±r. Bu da deÄŸiÅŸkenlerin kapsamÄ±nÄ±n az tutulmasÄ± demektir.
+Yani deÄŸiÅŸkeni ilk nerede kullancaksak orada tanÄ±mlamamÄ±z gerekir.
 ----------------------------------------------------------------------------------------
 
 c de;
 loose type control 
-Yani derleme zamanı kontrolleri zayıftır. 
+Yani derleme zamanÄ± kontrolleri zayÄ±ftÄ±r. 
 
 cpp de;
 strict type control
-Yani derleme zamanı kontrolleri katıdır.
-Bu da cpp yi daha güvenilir yapar. Derlendikten sonra hata alma ihtimalimiz azalır.
+Yani derleme zamanÄ± kontrolleri katÄ±dÄ±r.
+Bu da cpp yi daha gÃ¼venilir yapar. Derlendikten sonra hata alma ihtimalimiz azalÄ±r.
 ----------------------------------------------------------------------------------------
 
 c de;
-'A' //character constant denmektedir. Ancak bunun türü int olmaktadır.
+'A' //character constant denmektedir. Ancak bunun tÃ¼rÃ¼ int olmaktadÄ±r.
 
 cpp de;  
-'A' //character literal denmektedir. Bunun türü char olmaktadır.
+'A' //character literal denmektedir. Bunun tÃ¼rÃ¼ char olmaktadÄ±r.
 ----------------------------------------------------------------------------------------
 
 c de; 
-"Hasan Basri" //string literali. C de bunun türü, "char dizi[12]" dir.
+"Hasan Basri" //string literali. C de bunun tÃ¼rÃ¼, "char dizi[12]" dir.
 
 cpp de;
-"Hasan Basri" //string literali. Cpp de bunun türü, "const char dizi[12]" dir.
+"Hasan Basri" //string literali. Cpp de bunun tÃ¼rÃ¼, "const char dizi[12]" dir.
 ----------------------------------------------------------------------------------------
 
-her ne kadar c de const char dememiş olsakta, string literallerinin değiştirilebilir olduğu manasına gelmez. String literalleri değiştirilemezler. Değiştirme işlemi tanımsız davranıştır.
+her ne kadar c de const char dememiÅŸ olsakta, string literallerinin deÄŸiÅŸtirilebilir olduÄŸu manasÄ±na gelmez. String literalleri deÄŸiÅŸtirilemezler. DeÄŸiÅŸtirme iÅŸlemi tanÄ±msÄ±z davranÄ±ÅŸtÄ±r.
 
-örneğin;
+Ã¶rneÄŸin;
 char* p ="kaya";
 *p = 'm'; 
-yapılamaz. Tanımsız davranıştır.
+yapÄ±lamaz. TanÄ±msÄ±z davranÄ±ÅŸtÄ±r.
  ----------------------------------------------------------------------------------------
 
 c de;
 const int x;
-c de const nesneler initilaize edilmek zorunda değildir.
+c de const nesneler initilaize edilmek zorunda deÄŸildir.
 
 cpp de;
 const int x = 10;
-cpp de const nesneler initilaize edilmek zorundadır. 
+cpp de const nesneler initilaize edilmek zorundadÄ±r. 
 ----------------------------------------------------------------------------------------
 
-static anahtar sözcüğü, iç bağlantı sağlar. İç bağlantı, sadece o dosyanın içinde kullanılabilirken, dış bağlantı olursa, diğer modüllerden de erişilebilir.
-C ve Cpp de global tanımlamalar dış bağlantıdır. Global tanımlamalar staticle belirtilirse iç bağlantı olur.
+static anahtar sÃ¶zcÃ¼ÄŸÃ¼, iÃ§ baÄŸlantÄ± saÄŸlar. Ä°Ã§ baÄŸlantÄ±, sadece o dosyanÄ±n iÃ§inde kullanÄ±labilirken, dÄ±ÅŸ baÄŸlantÄ± olursa, diÄŸer modÃ¼llerden de eriÅŸilebilir.
+C ve Cpp de global tanÄ±mlamalar dÄ±ÅŸ baÄŸlantÄ±dÄ±r. Global tanÄ±mlamalar staticle belirtilirse iÃ§ baÄŸlantÄ± olur.
 ----------------------------------------------------------------------------------------
 
-C de globalde tanımlanan;
-const int x = 10; //external (dış) bağlantıyken
+C de globalde tanÄ±mlanan;
+const int x = 10; //external (dÄ±ÅŸ) baÄŸlantÄ±yken
 
-Cpp de globalde tanımlanan;
-const int x = 10; //iç (internal) bağlantı olur.
+Cpp de globalde tanÄ±mlanan;
+const int x = 10; //iÃ§ (internal) baÄŸlantÄ± olur.
 ----------------------------------------------------------------------------------------
 
-c de karşılaştırma operatörleri
-10 > 5 //bunun sonucunun türü int ve değeri 1 iken
+c de karÅŸÄ±laÅŸtÄ±rma operatÃ¶rleri
+10 > 5 //bunun sonucunun tÃ¼rÃ¼ int ve deÄŸeri 1 iken
 
 ccp de;
-10 > 5 //bunun türü bool ve değeri true dur.
+10 > 5 //bunun tÃ¼rÃ¼ bool ve deÄŸeri true dur.
 ----------------------------------------------------------------------------------------
 
-cpp de bool ve int arasında örtülü tür dönüşümü vardır.;
+cpp de bool ve int arasÄ±nda Ã¶rtÃ¼lÃ¼ tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ vardÄ±r.;
 int x = 10;
-bool y = x; olursa, // b = true olacaktır.
+bool y = x; olursa, // b = true olacaktÄ±r.
 
-Eğer;
+EÄŸer;
 int x = 0;
-bool y = x; olursa, // b = false olacaktır.
+bool y = x; olursa, // b = false olacaktÄ±r.
 ----------------------------------------------------------------------------------------
 
-cpp de adreslerden(pointerlerden) de bool türüne örtülü tür dönüşümü vardır.
-içi dolu pointerler true sonuç verirken, null pointer false sonucunu verecektir.
+cpp de adreslerden(pointerlerden) de bool tÃ¼rÃ¼ne Ã¶rtÃ¼lÃ¼ tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ vardÄ±r.
+iÃ§i dolu pointerler true sonuÃ§ verirken, null pointer false sonucunu verecektir.
 ----------------------------------------------------------------------------------------
 
-Bool türünden aritmatik türe de örtülü dönüşüm vardır. 
-bool değer olarak true 1 e dönüşürken, 
-false değer 0 a dönüşecektir.
+Bool tÃ¼rÃ¼nden aritmatik tÃ¼re de Ã¶rtÃ¼lÃ¼ dÃ¶nÃ¼ÅŸÃ¼m vardÄ±r. 
+bool deÄŸer olarak true 1 e dÃ¶nÃ¼ÅŸÃ¼rken, 
+false deÄŸer 0 a dÃ¶nÃ¼ÅŸecektir.
 ----------------------------------------------------------------------------------------
 
-Ancak bool türünden tanımlanan değişkenlerle toplama, çıkarma, ++, -- işlemleri kullanılamaz.
+Ancak bool tÃ¼rÃ¼nden tanÄ±mlanan deÄŸiÅŸkenlerle toplama, Ã§Ä±karma, ++, -- iÅŸlemleri kullanÄ±lamaz.
 ----------------------------------------------------------------------------------------
 
-bool un sizeof değeri 1 dir.
-Bitsel düzeyde de temsil edilemez.
+bool un sizeof deÄŸeri 1 dir.
+Bitsel dÃ¼zeyde de temsil edilemez.
 ----------------------------------------------------------------------------------------
 
-nullptr nin türü nullptr_t dir.
-artık cpp de, null ve ya 0 kullanmak yerine nullptr kullanmak gerekecektir.
+nullptr nin tÃ¼rÃ¼ nullptr_t dir.
+artÄ±k cpp de, null ve ya 0 kullanmak yerine nullptr kullanmak gerekecektir.
 ----------------------------------------------------------------------------------------
 
 array decay???
@@ -121,12 +121,139 @@ structures
 unions
 enumarations
 
-c deki structures ile cpp deki aynı değildir.
+c deki structures ile cpp deki aynÄ± deÄŸildir.
 ----------------------------------------------------------------------------------------
 
-c de user define type lar en az bir üyeye (member) sahip olmalıdır.
+c de user define type lar en az bir Ã¼yeye (member) sahip olmalÄ±dÄ±r.
 
-cpp de ise user define typelar herhangi bir üyeye sahip olmak zorunda değildir. Bu durum aynı zmanda çok sık kullanılır.
+cpp de ise user define typelar herhangi bir Ã¼yeye sahip olmak zorunda deÄŸildir. Bu durum aynÄ± zamanda Ã§ok sÄ±k kullanÄ±lÄ±r.
+----------------------------------------------------------------------------------------
+
+scope???  
+name lookup???
+linkage???
+
+----------------------------------------------------------------------------------------
+
+:: // scope resolution operator
+
+----------------------------------------------------------------------------------------
+
+Generic Programalama
+Ã–zetle derleyiciye kod yazdÄ±ran programlama tÃ¼rÃ¼dÃ¼r denebilir. Yani c de yazdÄ±ÄŸÄ±mÄ± kod doÄŸrudan assembly diline Ã§evrilirken, generic programalamayÄ± kapsayan dil olan c++ da yazdÄ±ÄŸÄ±mÄ±z kodlar sayesinde, derleyiciye kod yazdÄ±rÄ±rÄ±z. Derleyiciye kod yazdÄ±ran araÃ§ ise, 
+template tir. Template(Åablon)
+
+----------------------------------------------------------------------------------------
+
+C de olmayÄ±p Cpp de olan bir araÃ§ta type deductiondur. TÃ¼rkÃ§e Ã§evirisi ise tÃ¼r Ã§Ä±karÄ±mÄ±dÄ±r. 
+
+type deductionda auto anahtar sÃ¶zcÃ¼ÄŸÃ¼ kullanÄ±lmaktadÄ±r.
+
+----------------------------------------------------------------------------------------
+
+overload edilmiÅŸ anahtar kelimeler (KullanÄ±m biÃ§imine gÃ¶re farklÄ± anlamlarÄ± olan anahtar kelimeler)
+
+c de sadece static anahtar kelimesi vardÄ±r. Onun dÄ±ÅŸÄ±ndakiler tek bir manaya sahiptir.
+cpp de ise static, using, auto, mutable anahtar sÃ¶zcÃ¼kler overload edilmiÅŸtir.
+
+----------------------------------------------------------------------------------------
+
+Ä°lk deÄŸer verme (initialize etme)
+
+int x = 10; // initializition (ilk deÄŸer verme)
+x = 35;     // assignment (atama)
+
+cpp de atama ve ilk deÄŸer verme Ã§ok Ã¶nemlidir. C de bu kadar Ã¶nemli deÄŸildir.
+
+----------------------------------------------------------------------------------------
+
+default initializition (bu ÅŸekilde kullanmak iyi bir tanÄ±mlama deÄŸil. MÃ¼mkÃ¼nse kullanmayÄ±n.)
+int main()
+{
+    int x;
+}
+
+----------------------------------------------------------------------------------------
+zero initializition (DeÄŸiÅŸkenin deÄŸerinin sÄ±fÄ±r deÄŸeri ile baÅŸlatÄ±lmasÄ± demektir. Bool tÃ¼rdense false deÄŸerle baÅŸlatÄ±lmasÄ± demektir. Pointe deÄŸiÅŸkennlerse nullptr ile initialize edilmesi demektir.)
+
+bool flag; // false deÄŸerle baÅŸlatÄ±lÄ±r.
+int x;	   // 0 deÄŸerini alÄ±r
+ptr* abc;  // nullptr deÄŸeriyle baÅŸlar.
+
+int main()
+{
+}
+----------------------------------------------------------------------------------------
+
+int main ()
+{
+	int x = 10; 	// copy initializition
+	int y(20);	//direct initializition (c de yok)
+}
+
+----------------------------------------------------------------------------------------
+
+// bunu tekrardan izle. saat 1.00.00 sonrasÄ±na  bakabilirsin.
+uniform initializition (brace initializition)
+
+int main()
+{
+	int z{40};
+}
+
+----------------------------------------------------------------------------------------
+
+Dizileri initialize etme
+
+int main()
+{
+	int x[] = {1,2,3,4,5};
+	int x[]{1,2,3,4,5};
+	int x[](1,2,3,4,5);
+}
+Ã¼Ã§Ã¼ de aynÄ± manaya gelmektedir.
+
+----------------------------------------------------------------------------------------
+
+Value initializition
+
+bunun kulanÄ±lmasÄ±nÄ±n sebebi, x in itialize edildiÄŸi deÄŸer 0 olur.
+Bool olursa, false
+pointer olursa nullptr olarak baÅŸlar.
+
+int main()
+{
+	int x{};
+}
+
+----------------------------------------------------------------------------------------
+
+BU karÄ±ÅŸtÄ±rÄ±lmamalÄ±. BUrada x bir deÄŸiÅŸken deÄŸil, fonksiyon bildirimidir. Bu yÃ¼zden deÄŸiÅŸken olarak dÃ¼ÅŸÃ¼nmemek lazÄ±m.
+
+int main()
+{
+	int x();
+}
+
+
+----------------------------------------------------------------------------------------
+1.00.00 ile 1.45.00 arasÄ±nÄ± tekrar izle. Bu aralÄ±ÄŸÄ± not ALMADIM.
+----------------------------------------------------------------------------------------
+
+cpp de c kÃ¼tÃ¼phaneleri include edilecekse Ã¶rneÄŸin,
+<string.h> kÃ¼tÃ¼phanesini <cstring> olarak ifade etmek lazÄ±m. Neco nedenini sÃ¶ylemedi. Ancak bu ÅŸekilde olmasÄ± gerektiÄŸini ciddi ÅŸekilde vurguladÄ±.
+Ve ya c deki include <time.h> kÃ¼tÃ¼phanesi include <ctime> olarak include edilmeli.
+
+kendi oluÅŸturduÄŸumuz header fileleri ise, gene aynÄ± ÅŸekilde include "hasan.h" olarak include edeceÄŸiz.
+
+----------------------------------------------------------------------------------------
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
+2. dersi tekrardan izle...
 ----------------------------------------------------------------------------------------
 
 
